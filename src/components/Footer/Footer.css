@@ -1,0 +1,387 @@
+
+.taash-footer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 85px 6% 0;
+  background: #071b2b;
+  color: #eee5d6;
+}
+
+.taash-footer-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: url("/images/footer/footer-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.taash-footer-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(3, 19, 31, 0.70);
+}
+
+.taash-footer-container {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* FOUR COLUMNS - NO VERTICAL DIVIDERS */
+
+.taash-footer-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.75fr 1.15fr 1.25fr;
+  gap: 48px;
+  padding-bottom: 75px;
+}
+
+.taash-footer-brand,
+.taash-footer-column {
+  min-width: 0;
+}
+
+/* BRAND */
+
+.taash-footer-logo {
+  display: inline-block;
+  max-width: 230px;
+}
+
+.taash-footer-logo img {
+  display: block;
+  width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.taash-footer-brand-line {
+  width: 65px;
+  height: 3px;
+  margin: 30px 0 22px;
+  background: #f4dc88;
+}
+
+.taash-footer-tagline {
+  margin: 0;
+  color: #eee5d6;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  font-style: italic;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.taash-footer-brand-description {
+  max-width: 330px;
+  margin-top: 22px;
+  color: rgba(238, 229, 214, 0.72);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* HEADINGS */
+
+.taash-footer-heading {
+  margin: 0 0 28px;
+  color: #f4dc88;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+/* QUICK LINKS */
+
+.taash-footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.taash-footer-links li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(238, 229, 214, 0.9);
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-link-arrow {
+  color: #f4dc88;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.taash-footer-links li a:hover {
+  color: #f4dc88;
+  transform: translateX(5px);
+}
+
+/* SERVICES */
+
+.taash-footer-service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.taash-footer-service {
+  display: grid;
+  grid-template-columns: 40px 1fr 15px;
+  align-items: start;
+  gap: 13px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.taash-footer-service-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 39px;
+  height: 39px;
+  border: 1px solid #c6a65d;
+  border-radius: 9px;
+  color: #f4dc88;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.taash-footer-service-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.taash-footer-service-content strong {
+  color: #eee5d6;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.taash-footer-service-content small {
+  color: rgba(238, 229, 214, 0.75);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.taash-footer-service-arrow {
+  color: #f4dc88;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.taash-footer-service:hover .taash-footer-service-arrow {
+  opacity: 1;
+  transform: translate(3px, -3px);
+}
+
+/* CONTACT */
+
+.taash-footer-connect-text {
+  margin: -5px 0 22px;
+  color: rgba(238, 229, 214, 0.78);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.taash-footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.taash-footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #eee5d6;
+  font-size: 13px;
+  line-height: 1.6;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+a.taash-footer-contact {
+  transition: color 0.3s ease;
+}
+
+a.taash-footer-contact:hover {
+  color: #f4dc88;
+}
+
+.taash-footer-contact-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #c6a65d;
+  border-radius: 9px;
+  color: #f4dc88;
+}
+
+.taash-footer-contact-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+/* SOCIAL */
+
+.taash-footer-divider {
+  width: 100%;
+  height: 1px;
+  margin: 25px 0;
+  background: rgba(238, 229, 214, 0.3);
+}
+
+.taash-footer-follow-heading {
+  margin-bottom: 18px;
+}
+
+.taash-footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.taash-footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  border: 1px solid #c6a65d;
+  border-radius: 9px;
+  color: #f4dc88;
+  transition: all 0.3s ease;
+}
+
+.taash-footer-socials svg {
+  width: 22px;
+  height: 22px;
+}
+
+.taash-footer-socials a:hover {
+  background: #f4dc88;
+  color: #17314c;
+  transform: translateY(-4px);
+}
+
+/* BOTTOM BAR */
+
+.taash-footer-bottom {
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid rgba(238, 229, 214, 0.35);
+}
+
+.taash-footer-bottom p {
+  margin: 0;
+  color: rgba(238, 229, 214, 0.82);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.taash-footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.taash-footer-bottom-links a,
+.taash-footer-bottom-links span {
+  color: rgba(238, 229, 214, 0.82);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.taash-footer-bottom-links a:hover {
+  color: #f4dc88;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+  .taash-footer {
+    padding: 70px 5% 0;
+  }
+
+  .taash-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 50px 40px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .taash-footer {
+    padding: 60px 22px 0;
+  }
+
+  .taash-footer-bg {
+    background-position: center;
+  }
+
+  .taash-footer-overlay {
+    background: rgba(3, 19, 31, 0.82);
+  }
+
+  .taash-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+    padding-bottom: 40px;
+  }
+
+  .taash-footer-logo {
+    max-width: 200px;
+  }
+
+  .taash-footer-tagline {
+    font-size: 21px;
+  }
+
+  .taash-footer-column {
+    padding-top: 28px;
+    border-top: 1px solid rgba(238, 229, 214, 0.22);
+  }
+
+  .taash-footer-heading {
+    margin-bottom: 20px;
+  }
+
+  .taash-footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  .taash-footer-bottom p {
+    font-size: 9px;
+    line-height: 1.7;
+  }
+
+  .taash-footer-bottom-links {
+    flex-wrap: wrap;
+  }
+}

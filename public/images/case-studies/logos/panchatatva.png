@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <rect width="400" height="200" fill="#17314c"/>
+  <text x="200" y="85" text-anchor="middle" fill="#f4dc88" font-family="Georgia, serif" font-size="32" font-weight="700" letter-spacing="2">PANCHATATVA</text>
+  <text x="200" y="125" text-anchor="middle" fill="rgba(238,229,214,0.6)" font-family="Georgia, serif" font-size="14" letter-spacing="4">AYURVEDIC SKINCARE</text>
+  <line x1="120" y1="100" x2="280" y2="100" stroke="#f4dc88" stroke-width="0.5" opacity="0.4"/>
+</svg>

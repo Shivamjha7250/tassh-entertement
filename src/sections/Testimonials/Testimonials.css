@@ -1,0 +1,549 @@
+
+/* =====================================================
+   TESTIMONIALS SECTION — CINEMATIC 3D
+   TAASH ENTERTAINMENT
+===================================================== */
+
+.testimonials-section {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 100vh;
+  min-height: 720px;
+  overflow: hidden;
+
+  color: #eee5d6;
+  background: #071b2b;
+
+  perspective: 1200px;
+}
+
+/* =====================================================
+   BACKGROUND IMAGE — 3D PARALLAX
+===================================================== */
+
+.testimonials-bg {
+  position: absolute;
+  inset: -12%;
+  z-index: -2;
+
+  /* Apna existing background image URL yahan add karo */
+  background-image: url("/images/testimonials/testimonials-bg.png");
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* =====================================================
+   BACKGROUND OVERLAY
+===================================================== */
+
+.testimonials-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 20, 33, 0.94),
+      rgba(7, 28, 44, 0.80) 50%,
+      rgba(7, 28, 44, 0.65)
+    ),
+    linear-gradient(
+      0deg,
+      rgba(4, 20, 33, 0.85),
+      rgba(4, 20, 33, 0.25)
+    );
+}
+
+/* =====================================================
+   MAIN HEADING
+===================================================== */
+
+.testimonials-heading {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  padding: 115px 20px 35px;
+
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.testimonials-eyebrow {
+  display: inline-block;
+
+  color: #f4dc88;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.testimonials-heading h2 {
+  margin: 18px 0 12px;
+
+  color: #eee5d6;
+
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 0.98;
+  font-weight: 750;
+  letter-spacing: -3px;
+}
+
+.testimonials-heading h2 span {
+  display: inline-block;
+
+  color: #f4dc88;
+
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.testimonials-heading p {
+  margin: 15px 0 0;
+
+  color: rgba(238, 229, 214, 0.75);
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =====================================================
+   TESTIMONIALS TRACK — DESKTOP HORIZONTAL
+===================================================== */
+
+.testimonials-track {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: stretch;
+  gap: 28px;
+
+  width: max-content;
+  padding: 0 6vw;
+
+  box-sizing: border-box;
+
+  will-change: transform;
+}
+
+/* =====================================================
+   TESTIMONIAL CARD
+===================================================== */
+
+.testimonial-card {
+  position: relative;
+
+  flex: 0 0 430px;
+  width: 430px;
+  height: 470px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 28px;
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(244, 220, 136, 0.75);
+  border-radius: 22px;
+
+  color: #17314c;
+  background: #eee5d6;
+
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.25),
+    0 0 20px rgba(244, 220, 136, 0.08);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 22px 55px rgba(0, 0, 0, 0.32),
+    0 0 25px rgba(244, 220, 136, 0.15);
+}
+
+/* =====================================================
+   CARD TOP
+===================================================== */
+
+.testimonial-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  flex-shrink: 0;
+}
+
+.testimonial-number {
+  color: #a77b3d;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.testimonial-category {
+  color: #a77b3d;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  text-align: right;
+}
+
+/* =====================================================
+   QUOTE MARK
+===================================================== */
+
+.testimonial-quote-mark {
+  height: 48px;
+  margin-top: 14px;
+
+  color: #c49b52;
+
+  font-family: Georgia, serif;
+  font-size: 76px;
+  line-height: 1;
+}
+
+/* =====================================================
+   MAIN QUOTE
+===================================================== */
+
+.testimonial-card h3 {
+  flex-shrink: 0;
+
+  margin: 5px 0 18px;
+
+  color: #17314c;
+
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+/* =====================================================
+   TESTIMONIAL STORY
+===================================================== */
+
+.testimonial-story {
+  flex: 1;
+  min-height: 0;
+
+  overflow-y: auto;
+  padding-right: 8px;
+
+  scrollbar-width: thin;
+  scrollbar-color: #c49b52 transparent;
+}
+
+.testimonial-story::-webkit-scrollbar {
+  width: 4px;
+}
+
+.testimonial-story::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.testimonial-story::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #c49b52;
+}
+
+.testimonial-story p {
+  margin: 0 0 13px;
+
+  color: #536477;
+
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.testimonial-story p:last-child {
+  margin-bottom: 5px;
+}
+
+/* =====================================================
+   CARD FOOTER
+===================================================== */
+
+.testimonial-card-footer {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+
+  margin-top: 16px;
+  padding-top: 16px;
+
+  border-top: 1px solid rgba(23, 49, 76, 0.18);
+}
+
+.testimonial-card-footer h4 {
+  margin: 0 0 5px;
+
+  color: #17314c;
+
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.testimonial-card-footer > div > span {
+  display: block;
+
+  color: #7a8490;
+
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.testimonial-result {
+  max-width: 48%;
+
+  color: #98713b;
+
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  text-align: right;
+}
+
+/* =====================================================
+   SCROLL NOTE
+===================================================== */
+
+.testimonials-scroll-note {
+  position: absolute;
+  right: 6%;
+  bottom: 28px;
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  color: rgba(238, 229, 214, 0.75);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.testimonials-scroll-line {
+  display: inline-block;
+
+  width: 55px;
+  height: 1px;
+
+  background: #f4dc88;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) and (min-width: 901px) {
+  .testimonials-heading {
+    padding-top: 105px;
+  }
+
+  .testimonial-card {
+    flex-basis: 380px;
+    width: 380px;
+    height: 450px;
+    padding: 24px;
+  }
+
+  .testimonial-card h3 {
+    font-size: 20px;
+  }
+}
+
+/* =====================================================
+   MOBILE — VERTICAL LAYOUT
+===================================================== */
+
+@media (max-width: 900px) {
+  .testimonials-section {
+    height: auto;
+    min-height: 100svh;
+    overflow: hidden;
+    perspective: none;
+  }
+
+  .testimonials-bg {
+    inset: -5%;
+
+    transform: none;
+    transform-style: flat;
+    will-change: auto;
+  }
+
+  .testimonials-heading {
+    padding: 105px 20px 35px;
+  }
+
+  .testimonials-eyebrow {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+  }
+
+  .testimonials-heading h2 {
+    font-size: clamp(43px, 11vw, 65px);
+    letter-spacing: -2px;
+  }
+
+  .testimonials-heading p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .testimonials-track {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 22px;
+    padding: 0 20px;
+
+    transform: none !important;
+  }
+
+  .testimonial-card {
+    flex: none;
+
+    width: 100%;
+    max-width: 520px;
+    height: 470px;
+
+    padding: 23px;
+  }
+
+  .testimonial-card h3 {
+    font-size: 20px;
+  }
+
+  .testimonial-story p {
+    font-size: 12px;
+  }
+
+  .testimonials-scroll-note {
+    position: relative;
+    right: auto;
+    bottom: auto;
+
+    justify-content: center;
+
+    margin: 30px 0;
+  }
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+  .testimonials-heading {
+    padding: 95px 17px 30px;
+  }
+
+  .testimonials-heading h2 {
+    font-size: 45px;
+  }
+
+  .testimonials-track {
+    padding: 0 15px;
+    gap: 18px;
+  }
+
+  .testimonial-card {
+    height: 490px;
+    padding: 20px;
+    border-radius: 17px;
+  }
+
+  .testimonial-card h3 {
+    font-size: 18px;
+  }
+
+  .testimonial-category {
+    font-size: 8px;
+    letter-spacing: 0.8px;
+  }
+
+  .testimonial-story p {
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .testimonial-card-footer h4 {
+    font-size: 11px;
+  }
+
+  .testimonial-result {
+    font-size: 8px;
+  }
+}
+
+/* =====================================================
+   SHORT DESKTOP SCREEN
+===================================================== */
+
+@media (max-height: 760px) and (min-width: 901px) {
+  .testimonials-heading {
+    padding-top: 95px;
+    padding-bottom: 22px;
+  }
+
+  .testimonials-heading h2 {
+    font-size: 62px;
+  }
+
+  .testimonial-card {
+    height: 430px;
+  }
+}
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonials-bg,
+  .testimonial-card {
+    transition: none !important;
+    animation: none !important;
+  }
+}

@@ -1,0 +1,255 @@
+
+/* ================================
+   ABOUT SECTION
+================================ */
+
+.about-section {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 100svh;
+  margin: 0;
+  padding: 120px 8% 100px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+  background: #101a29;
+}
+
+/* Background Image */
+.about-bg-layer {
+  position: absolute;
+  inset: -12%;
+  z-index: 0;
+
+  background-image: url("/images/about/about-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: translate3d(0, 0, 0) scale(1.15);
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Dark Overlay */
+.about-video-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    90deg,
+    rgba(16, 26, 41, 0.92) 0%,
+    rgba(16, 26, 41, 0.72) 50%,
+    rgba(16, 26, 41, 0.35) 100%
+  );
+
+  pointer-events: none;
+}
+
+/* Gold Depth Gradient */
+.about-depth-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  background: linear-gradient(
+    135deg,
+    rgba(244, 220, 136, 0.08),
+    transparent 45%,
+    rgba(254, 208, 219, 0.06)
+  );
+
+  background-size: 200% 200%;
+  pointer-events: none;
+}
+
+/* Content Container */
+.about-container {
+  position: relative;
+  z-index: 3;
+
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Content */
+.about-content {
+  position: relative;
+  width: 68%;
+  max-width: 850px;
+
+  opacity: 1;
+  transform: none;
+
+  will-change: opacity, transform;
+}
+
+/* Label */
+.about-label {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  color: #f4dc88;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+/* Heading */
+.about-content h2 {
+  margin: 0;
+
+  color: #eee5d6;
+  font-size: clamp(42px, 6vw, 85px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+
+.about-content h2 span {
+  color: #f4dc88;
+}
+
+/* Paragraphs */
+.about-description {
+  max-width: 780px;
+  margin-top: 22px;
+
+  color: #ffffff !important;
+  font-size: 18px;
+  line-height: 1.9;
+  font-weight: 400;
+}
+
+/* Button */
+.about-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 35px;
+  padding: 15px 32px;
+
+  color: #17314c;
+  background: #f4dc88;
+
+  border: 1px solid #f4dc88;
+  border-radius: 2px;
+
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  transition: all 0.35s ease;
+}
+
+.about-button:hover {
+  color: #f4dc88;
+  background: transparent;
+  transform: translateY(-4px);
+}
+
+/* Tagline */
+.about-tagline {
+  margin-top: 45px;
+
+  color: #f4dc88;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  opacity: 0.85;
+}
+
+/* Bottom Line */
+.about-bottom-line {
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  z-index: 4;
+
+  width: 84%;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #f4dc88,
+    transparent
+  );
+
+  opacity: 0.5;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+  .about-section {
+    min-height: 90svh;
+    padding: 100px 6% 80px;
+  }
+
+  .about-content {
+    width: 85%;
+  }
+
+  .about-description {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-section {
+    min-height: auto;
+    padding: 100px 6% 80px;
+  }
+
+  .about-content {
+    width: 100%;
+  }
+
+  .about-content h2 {
+    font-size: 42px;
+  }
+
+  .about-description {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .about-button {
+    padding: 13px 25px;
+    font-size: 13px;
+  }
+
+  .about-tagline {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .about-bottom-line {
+    left: 6%;
+    width: 88%;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .about-bg-layer {
+    transform: none !important;
+    will-change: auto;
+  }
+
+  .about-content {
+    opacity: 1;
+    transform: none;
+    will-change: auto;
+  }
+}

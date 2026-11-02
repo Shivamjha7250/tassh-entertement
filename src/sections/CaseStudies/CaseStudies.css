@@ -1,0 +1,620 @@
+
+/* =====================================================
+   CASE STUDIES SECTION — CINEMATIC
+   TAASH ENTERTAINMENT
+===================================================== */
+
+.case-studies-section {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 100vh;
+  min-height: 680px;
+  overflow: hidden;
+  color: #eee5d6;
+  background: #071b2b;
+}
+
+/* BACKGROUND IMAGE */
+
+.case-background {
+  position: absolute;
+  inset: -15%;
+  z-index: -3;
+  background-image: url("/images/case-studies/case-studies-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  will-change: transform, background-position;
+  transform: scale(1.04);
+  pointer-events: none;
+}
+
+.case-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 22, 36, 0.94),
+      rgba(7, 28, 44, 0.78) 55%,
+      rgba(7, 28, 44, 0.58)
+    ),
+    linear-gradient(
+      0deg,
+      rgba(4, 20, 33, 0.78),
+      rgba(4, 20, 33, 0.25)
+    );
+}
+
+.case-light-effect {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 50% 45%,
+    rgba(244, 220, 136, 0.09),
+    transparent 48%
+  );
+}
+
+/* =====================================================
+   MAIN LAYOUT
+===================================================== */
+
+.case-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 125px 5% 28px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.case-heading {
+  width: 100%;
+  flex-shrink: 0;
+  text-align: center;
+  margin: 0 auto 25px;
+}
+
+.case-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  color: #f4dc88;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.case-eyebrow i {
+  display: block;
+  width: 55px;
+  height: 1px;
+  background: #f4dc88;
+}
+
+.case-heading h2 {
+  margin: 15px 0 10px;
+  color: #eee5d6;
+  font-size: clamp(48px, 6vw, 88px);
+  line-height: 0.92;
+  font-weight: 750;
+  letter-spacing: -4px;
+}
+
+.case-heading h2 span {
+  display: inline-block;
+  color: #f4dc88;
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.case-heading p {
+  margin: 15px 0 0;
+  color: rgba(238, 229, 214, 0.78);
+  font-size: 16px;
+}
+
+/* =====================================================
+   CARDS VIEWPORT & TRACK
+===================================================== */
+
+.case-cards-viewport {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.case-cards-track {
+  display: flex;
+  align-items: stretch;
+  gap: 28px;
+
+  width: max-content;
+  height: 100%;
+
+  will-change: transform;
+}
+
+/* =====================================================
+   CASE STUDY CARD
+===================================================== */
+
+.case-study-card {
+  flex: 0 0 calc((min(90vw, 1620px) - 84px) / 4);
+  min-width: 0;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+  border: 1px solid rgba(244, 220, 136, 0.9);
+  border-radius: 27px;
+
+  background: #eee5d6;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.24),
+    0 0 18px rgba(244, 220, 136, 0.08);
+
+  opacity: 0;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.case-study-card:hover {
+  transform: translateY(-6px) scale(1.01);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.3),
+    0 0 25px rgba(244, 220, 136, 0.15);
+}
+
+/* =====================================================
+   LOGO CONTAINER
+===================================================== */
+
+.case-card-image {
+  position: relative;
+  height: 42%;
+  min-height: 160px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 0.08),
+      transparent 65%
+    ),
+    linear-gradient(135deg, #17314c, #203b55);
+}
+
+.case-card-number {
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  z-index: 2;
+
+  color: #eee5d6;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.case-logo-wrap {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.case-logo-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: transparent;
+  border: none;
+}
+
+/* =====================================================
+   CARD INFORMATION
+===================================================== */
+
+.case-card-info {
+  flex: 1;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px 21px 18px;
+  box-sizing: border-box;
+
+  color: #17314c;
+  background: #eee5d6;
+}
+
+.case-card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 17px;
+}
+
+.case-card-category {
+  color: #a77b3d;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-align: right;
+}
+
+.case-card-info h3 {
+  margin: 12px 0 9px;
+  color: #17314c;
+  font-size: clamp(16px, 1.2vw, 20px);
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.case-card-description {
+  margin: 0;
+  color: #536477;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.case-card-services {
+  margin-top: auto;
+  padding: 13px 0;
+
+  border-top: 1px solid rgba(23, 49, 76, 0.18);
+  border-bottom: 1px solid rgba(23, 49, 76, 0.18);
+
+  color: #98713b;
+  font-size: 10px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+/* =====================================================
+   EXPLORE BUTTON
+===================================================== */
+
+.case-card-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 43px;
+
+  margin-top: 12px;
+  padding: 10px 14px;
+  box-sizing: border-box;
+
+  border: 1px solid #17314c;
+  border-radius: 5px;
+
+  color: #17314c;
+  background: transparent;
+
+  text-align: center;
+  text-decoration: none;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+
+  transition: all 0.3s ease;
+}
+
+.case-card-link:hover {
+  color: #17314c;
+  background: #f4dc88;
+  border-color: #f4dc88;
+}
+
+/* =====================================================
+   BOTTOM AREA
+===================================================== */
+
+.case-bottom {
+  position: relative;
+  min-height: 58px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  padding-top: 15px;
+}
+
+.case-scroll-note,
+.case-bottom-caption {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  color: rgba(238, 229, 214, 0.65);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.case-scroll-line {
+  display: inline-block;
+  width: 45px;
+  height: 1px;
+  background: #f4dc88;
+}
+
+.case-read-all {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 0 27px;
+
+  border-radius: 6px;
+
+  color: #17314c;
+  background: #f4dc88;
+
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  transition: all 0.3s ease;
+}
+
+.case-read-all:hover {
+  background: #eee5d6;
+  transform: translateY(-3px);
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) and (min-width: 769px) {
+  .case-content {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .case-study-card {
+    flex-basis: calc((92vw - 56px) / 3);
+  }
+
+  .case-heading h2 {
+    font-size: 68px;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+  .case-studies-section {
+    height: auto;
+    min-height: 100svh;
+    overflow: hidden;
+  }
+
+  .case-background {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    background-position: center;
+  }
+
+  .case-content {
+    height: auto;
+    min-height: 100svh;
+    padding: 105px 20px 28px;
+  }
+
+  .case-heading {
+    margin-bottom: 28px;
+  }
+
+  .case-eyebrow {
+    gap: 10px;
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .case-eyebrow i {
+    width: 28px;
+  }
+
+  .case-heading h2 {
+    font-size: clamp(48px, 13vw, 68px);
+    letter-spacing: -2px;
+  }
+
+  .case-heading p {
+    max-width: 320px;
+    margin: 12px auto 0;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .case-cards-viewport {
+    flex: none;
+    overflow: visible;
+  }
+
+  .case-cards-track {
+    width: 100%;
+    height: auto;
+
+    flex-direction: column;
+    gap: 22px;
+
+    transform: none !important;
+  }
+
+  .case-study-card {
+    flex: none;
+    width: 100%;
+    height: 440px;
+    opacity: 1;
+  }
+
+  .case-card-image {
+    height: 180px;
+    min-height: 180px;
+  }
+
+  .case-logo-wrap {
+    padding: 8px;
+  }
+
+  .case-card-info {
+    padding: 18px;
+  }
+
+  .case-card-info h3 {
+    font-size: 18px;
+  }
+
+  .case-card-description {
+    font-size: 13px;
+  }
+
+  .case-card-services {
+    font-size: 11px;
+  }
+
+  .case-bottom {
+    min-height: auto;
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .case-scroll-note,
+  .case-bottom-caption {
+    display: none;
+  }
+
+  .case-read-all {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* =====================================================
+   SHORT DESKTOP SCREEN
+===================================================== */
+
+@media (max-height: 760px) and (min-width: 769px) {
+  .case-content {
+    padding-top: 112px;
+    padding-bottom: 18px;
+  }
+
+  .case-heading {
+    margin-bottom: 14px;
+  }
+
+  .case-heading h2 {
+    font-size: 62px;
+    margin: 10px 0 7px;
+  }
+
+  .case-heading p {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+
+  .case-card-image {
+    min-height: 130px;
+  }
+
+  .case-card-info {
+    padding: 14px 16px 12px;
+  }
+
+  .case-card-info h3 {
+    margin: 8px 0 6px;
+  }
+
+  .case-card-description {
+    font-size: 11px;
+  }
+
+  .case-card-services {
+    padding: 9px 0;
+    font-size: 9px;
+  }
+
+  .case-card-link {
+    min-height: 38px;
+    margin-top: 8px;
+  }
+}
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .case-background,
+  .case-study-card,
+  .case-card-link,
+  .case-read-all {
+    transition: none !important;
+    animation: none !important;
+  }
+}

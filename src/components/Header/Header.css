@@ -1,0 +1,263 @@
+
+/* =========================================
+   TAASH ENTERTAINMENT - HEADER
+========================================= */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 115px;
+  z-index: 1000;
+
+  padding: 0 5%;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  background: rgba(23, 49, 76, 0.97);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: none;
+  box-shadow: none;
+
+  transition:
+    height 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.site-header.scrolled {
+  height: 88px;
+  background: rgba(23, 49, 76, 0.98);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* CONTAINER */
+
+.header-container {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* LOGO */
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo-image {
+  display: block;
+  width: 180px;
+  height: 70px;
+  object-fit: contain;
+  transition: all 0.35s ease;
+}
+
+.site-header.scrolled .logo-image {
+  width: 150px;
+  height: 58px;
+}
+
+/* NAVIGATION */
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(16px, 2.2vw, 34px);
+}
+
+.nav-link {
+  position: relative;
+  color: #eee5d6;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 1px;
+  background: #f4dc88;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f4dc88;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* CONTACT BUTTON */
+
+.header-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+
+  padding: 13px 21px;
+
+  color: #17314c;
+  background: #f4dc88;
+  border: 1px solid #f4dc88;
+  border-radius: 3px;
+
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+
+  transition: all 0.3s ease;
+}
+
+.header-contact-btn span {
+  font-size: 17px;
+  transition: transform 0.3s ease;
+}
+
+.header-contact-btn:hover {
+  background: transparent;
+  color: #f4dc88;
+}
+
+.header-contact-btn:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* MOBILE MENU BUTTON */
+
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+
+  background: transparent;
+  border: 1px solid rgba(244, 220, 136, 0.45);
+  border-radius: 3px;
+
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 5px 0;
+  background: #f4dc88;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* TABLET AND MOBILE */
+
+@media (max-width: 1050px) {
+  .site-header {
+    height: 75px;
+    padding: 0 5%;
+  }
+
+  .site-header.scrolled {
+    height: 68px;
+  }
+
+  .logo-image {
+    width: 150px;
+    height: 58px;
+  }
+
+  .site-header.scrolled .logo-image {
+    width: 135px;
+    height: 52px;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 1002;
+  }
+
+  .header-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    padding: 25px 6% 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+
+    background: #17314c;
+    border: none;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+
+    transition: all 0.3s ease;
+  }
+
+  .header-nav.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    font-size: 15px;
+  }
+
+  .header-contact-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-image {
+    width: 135px;
+    height: 52px;
+  }
+
+  .site-header.scrolled .logo-image {
+    width: 125px;
+    height: 48px;
+  }
+}
